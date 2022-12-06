@@ -1,0 +1,442 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="12/1/2022 5:39:16 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LAKSHMI"
+  DTS:CreatorName="LAKSHMI\laksh"
+  DTS:DTSID="{FE638894-8A2B-4A07-BA74-4EA5ECE4D685}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.948.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Log_Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="10"
+  DTS:VersionGUID="{4CC0CAF7-04ED-41A2-9567-C2F2E0171BE3}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LAKSHMI\MSSQLSERVER01.tempdb]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{F0B0AD7E-8717-4220-9F59-04BE092C4467}"
+      DTS:ObjectName="LAKSHMI\MSSQLSERVER01.tempdb">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=LAKSHMI\MSSQLSERVER01;Initial Catalog=tempdb;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{F0B0AD7E-8717-4220-9F59-04BE092C4467}LAKSHMI\MSSQLSERVER01.tempdb;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{79194D94-0EB1-40CD-B76C-0042BD296D8C}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="id">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\End_log"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{8A150AF0-B046-4B0A-A054-944CAAE6895A}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="End_log"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:PropertyExpression
+        DTS:Name="SqlStatementSource">"update audit_log1
+set endtime = getdate(),
+timetakeninmin = datediff(minute,starttime,getdate()),
+status = 'success'
+where id = "+ (DT_WSTR,12)@[User::id]+ "
+"</DTS:PropertyExpression>
+      <DTS:EventHandlers>
+        <DTS:EventHandler
+          DTS:refId="Package\End_log.EventHandlers[OnError]"
+          DTS:CreationName="OnError"
+          DTS:DTSID="{1EC37B02-1170-4B3C-AD20-C73502F91EF6}"
+          DTS:EventID="0"
+          DTS:EventName="OnError"
+          DTS:LocaleID="-1">
+          <DTS:Variables>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:Description="The propagate property of the event"
+              DTS:DTSID="{51DCBDEF-CBEE-4CD2-B881-1C5FEB81BF54}"
+              DTS:IncludeInDebugDump="6789"
+              DTS:Namespace="System"
+              DTS:ObjectName="Propagate">
+              <DTS:VariableValue
+                DTS:DataType="11">-1</DTS:VariableValue>
+            </DTS:Variable>
+          </DTS:Variables>
+          <DTS:Executables>
+            <DTS:Executable
+              DTS:refId="Package\End_log.EventHandlers[OnError]\End_log"
+              DTS:CreationName="Microsoft.ExecuteSQLTask"
+              DTS:Description="Execute SQL Task"
+              DTS:DTSID="{58a77271-7eb6-4dde-b0fc-26cb182a9b19}"
+              DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="End_log">
+              <DTS:Variables />
+              <DTS:PropertyExpression
+                DTS:Name="SqlStatementSource">"update audit_log1
+set endtime = getdate(),
+timetakeninmin = datediff(minute,starttime,getdate()),
+status = 'success'
+where id = "+ (DT_WSTR,12)@[User::id]+ "
+"</DTS:PropertyExpression>
+              <DTS:EventHandlers>
+                <DTS:EventHandler
+                  DTS:refId="Package\End_log.EventHandlers[OnError]\End_log.EventHandlers[OnError]"
+                  DTS:CreationName="OnError"
+                  DTS:DTSID="{0a703e38-6ebe-4b2a-b3f8-0d76e9cd6da4}"
+                  DTS:EventID="0"
+                  DTS:EventName="OnError"
+                  DTS:LocaleID="-1">
+                  <DTS:Variables>
+                    <DTS:Variable
+                      DTS:CreationName=""
+                      DTS:Description="The propagate property of the event"
+                      DTS:DTSID="{59243660-ba21-4c80-8c61-8040006d7edb}"
+                      DTS:IncludeInDebugDump="6789"
+                      DTS:Namespace="System"
+                      DTS:ObjectName="Propagate">
+                      <DTS:VariableValue
+                        DTS:DataType="11">-1</DTS:VariableValue>
+                    </DTS:Variable>
+                  </DTS:Variables>
+                  <DTS:Executables />
+                </DTS:EventHandler>
+              </DTS:EventHandlers>
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:Connection="{F0B0AD7E-8717-4220-9F59-04BE092C4467}"
+                  SQLTask:SqlStatementSource="update audit_log1&#xA;set endtime = getdate(),&#xA;timetakeninmin = datediff(minute,starttime,getdate()),&#xA;status = 'success'&#xA;where id = 0&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              </DTS:ObjectData>
+            </DTS:Executable>
+          </DTS:Executables>
+        </DTS:EventHandler>
+      </DTS:EventHandlers>
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{F0B0AD7E-8717-4220-9F59-04BE092C4467}"
+          SQLTask:SqlStatementSource="update audit_log1&#xA;set endtime = getdate(),&#xA;timetakeninmin = datediff(minute,starttime,getdate()),&#xA;status = 'success'&#xA;where id = 0&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Log_Package_started"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{F77E4964-FF8C-4652-AAB1-1D09D1E3A2D7}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Log_Package_started"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{F0B0AD7E-8717-4220-9F59-04BE092C4467}"
+          SQLTask:SqlStatementSource="if object_id('audit_log1','U') is null&#xA;create table audit_log1(id int identity,packagename varchar(100),starttime datetime,endtime datetime,timetakeninmin int,status varchar(10))&#xA;insert into audit_log1&#xA;select 'package.dtsx',getdate(),null,0,''&#xA;select @@identity"
+          SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="0"
+            SQLTask:DtsVariableName="User::id" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Task 1"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{6027B6C6-E736-480A-BD61-2816274A9942}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Task 1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:EventHandlers>
+        <DTS:EventHandler
+          DTS:refId="Package\Task 1.EventHandlers[OnError]"
+          DTS:CreationName="OnError"
+          DTS:DTSID="{FD6E7C6D-5CF6-4F66-9336-DE440911F534}"
+          DTS:EventID="0"
+          DTS:EventName="OnError"
+          DTS:LocaleID="-1">
+          <DTS:Variables>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:Description="The propagate property of the event"
+              DTS:DTSID="{7D80DA54-2CE9-4D37-B40B-04174BAB0FEC}"
+              DTS:IncludeInDebugDump="6789"
+              DTS:Namespace="System"
+              DTS:ObjectName="Propagate">
+              <DTS:VariableValue
+                DTS:DataType="11">-1</DTS:VariableValue>
+            </DTS:Variable>
+          </DTS:Variables>
+          <DTS:Executables>
+            <DTS:Executable
+              DTS:refId="Package\Task 1.EventHandlers[OnError]\Failure_task"
+              DTS:CreationName="Microsoft.ExecuteSQLTask"
+              DTS:Description="Execute SQL Task"
+              DTS:DTSID="{8502b341-ce2f-47b0-b155-74732f34cb57}"
+              DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Failure_task">
+              <DTS:Variables />
+              <DTS:PropertyExpression
+                DTS:Name="SqlStatementSource">"update audit_log1
+set endtime = getdate(),
+timetakeninmin = datediff(minute,starttime,getdate()),
+status 'failure' 
+where id = "+ (DT_WSTR,12)@[User::id]+ "
+"</DTS:PropertyExpression>
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:Connection="{F0B0AD7E-8717-4220-9F59-04BE092C4467}"
+                  SQLTask:SqlStatementSource="update audit_log1&#xA;set endtime = getdate(),&#xA;timetakeninmin = datediff(minute,starttime,getdate()),&#xA;status 'failure' &#xA;where id = 0&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              </DTS:ObjectData>
+            </DTS:Executable>
+          </DTS:Executables>
+        </DTS:EventHandler>
+      </DTS:EventHandlers>
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{F0B0AD7E-8717-4220-9F59-04BE092C4467}"
+          SQLTask:SqlStatementSource="WAITFOR DELAY '00:01:05';" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Task 2"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{816E40C6-368B-4023-A89F-2B1F99314AEB}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Task 2"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{F0B0AD7E-8717-4220-9F59-04BE092C4467}"
+          SQLTask:SqlStatementSource="WAITFOR DELAY '00:01:05';" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{8A0F0661-CC75-4548-8544-CB632BCA82FE}"
+      DTS:From="Package\Log_Package_started"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Task 1" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{94A9CD3E-2E05-47BA-9156-6CB6A231AFC8}"
+      DTS:From="Package\Task 1"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Task 2" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{76755B9C-13C3-48A3-945E-FAD8680D1D96}"
+      DTS:From="Package\Task 2"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\End_log" />
+  </DTS:PrecedenceConstraints>
+  <DTS:EventHandlers>
+    <DTS:EventHandler
+      DTS:refId="Package.EventHandlers[OnError]"
+      DTS:CreationName="OnError"
+      DTS:DTSID="{8C11217D-75AA-4F16-BDEB-2B2F2CDE10A2}"
+      DTS:EventID="16384"
+      DTS:EventName="OnError"
+      DTS:LocaleID="-1">
+      <DTS:Variables>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:Description="The propagate property of the event"
+          DTS:DTSID="{42ABEF58-EFB4-4847-84D5-70D511EA1B87}"
+          DTS:IncludeInDebugDump="6789"
+          DTS:Namespace="System"
+          DTS:ObjectName="Propagate">
+          <DTS:VariableValue
+            DTS:DataType="11">-1</DTS:VariableValue>
+        </DTS:Variable>
+      </DTS:Variables>
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package.EventHandlers[OnError]\Execute SQL Task 3"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{d8764d08-90ff-4c1c-a0ae-758ec935e542}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Execute SQL Task 3">
+          <DTS:Variables />
+          <DTS:PropertyExpression
+            DTS:Name="SqlStatementSource">"update audit_log1
+set endtime = getdate(),
+timetakeninmin = datediff(minute,starttime,getdate()),
+status = 'failure'
+where id = "+ (DT_WSTR,12)@[User::id]+ "
+"</DTS:PropertyExpression>
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{F0B0AD7E-8717-4220-9F59-04BE092C4467}"
+              SQLTask:SqlStatementSource="update audit_log1&#xA;set endtime = getdate(),&#xA;timetakeninmin = datediff(minute,starttime,getdate()),&#xA;status = 'failure'&#xA;where id = 0&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:EventHandler>
+  </DTS:EventHandlers>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="116.8,41.6"
+          Id="Package\End_log"
+          TopLeft="36.7,310.3" />
+        <NodeLayout
+          Size="179.2,41.6"
+          Id="Package\Log_Package_started"
+          TopLeft="5.5,5.49999999999995" />
+        <NodeLayout
+          Size="109.6,41.6"
+          Id="Package\Task 1"
+          TopLeft="40.3,107.1" />
+        <NodeLayout
+          Size="109.6,41.6"
+          Id="Package\Task 2"
+          TopLeft="40.3,208.7" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="95.1,47.1">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59.9999999999999"
+              Start="0,0"
+              End="0,52.4999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.4999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="95.1,148.7">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59.9999999999999"
+              Start="0,0"
+              End="0,52.4999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.4999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="95.1,250.3">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59.9999999999999"
+              Start="0,0"
+              End="0,52.4999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.4999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <DtsEventHandler
+    design-time-name="Package.EventHandlers[OnError]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="173.6,41.6"
+          Id="Package.EventHandlers[OnError]\Execute SQL Task 3"
+          TopLeft="383,108" />
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
+  <DtsEventHandler
+    design-time-name="Package\End_log.EventHandlers[OnError]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="116.8,41.6"
+          Id="Package\End_log.EventHandlers[OnError]\End_log"
+          TopLeft="506,116" />
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
+  <DtsEventHandler
+    design-time-name="Package\Task 1.EventHandlers[OnError]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="135.2,41.6"
+          Id="Package\Task 1.EventHandlers[OnError]\Failure_task"
+          TopLeft="537,141" />
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

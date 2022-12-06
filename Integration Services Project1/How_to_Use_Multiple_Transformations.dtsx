@@ -1,0 +1,2849 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="12/5/2022 10:04:14 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LAKSHMI"
+  DTS:CreatorName="LAKSHMI\laksh"
+  DTS:DTSID="{7102593C-38E0-47DF-94DF-07F528772232}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.948.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{6192B208-46CB-4774-8C26-C90EA76EFD35}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{16DCE09C-0E91-40D6-A388-3423E76A2BDA}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\laksh\OneDrive\Documents\destination\dest\test.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="BusinessEntityID"
+              DTS:DTSID="{34555880-A9B9-452F-BA7A-54C2F388BAD1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="JobTitle"
+              DTS:DTSID="{1DC206D9-0A86-4F17-8292-2914CC6DC896}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="15"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NationalIDNumber"
+              DTS:DTSID="{BF4878A7-2071-4A7F-A14E-9401D4F4D7A2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="256"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="LoginID"
+              DTS:DTSID="{0CE6771E-F97F-4245-A09D-0F2D083CD899}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="892"
+              DTS:DataType="128"
+              DTS:TextQualified="True"
+              DTS:ObjectName="OrganizationNode"
+              DTS:DTSID="{3E477E81-BB88-4663-A8D9-E672338A2DD9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="OrganizationLevel"
+              DTS:DTSID="{E883D2A7-7F3A-4F2E-A80D-44DD535B49D1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="133"
+              DTS:TextQualified="True"
+              DTS:ObjectName="BirthDate"
+              DTS:DTSID="{00439ACE-FA05-4770-B9E1-C881288D058F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="1"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="MaritalStatus"
+              DTS:DTSID="{173CC00B-08A1-45A3-8422-8C78143C1DFF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="1"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Gender"
+              DTS:DTSID="{ED6D369D-23D5-4456-B531-6460367BC1D5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="133"
+              DTS:TextQualified="True"
+              DTS:ObjectName="HireDate"
+              DTS:DTSID="{CA440D98-50FD-44ED-A4F0-0E54E1026ACC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="11"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SalariedFlag"
+              DTS:DTSID="{7CC56C76-D2C0-4133-B1CE-F767E021F6FA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="VacationHours"
+              DTS:DTSID="{8239D478-DD33-41A0-A36F-BE6ACA12EE22}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SickLeaveHours"
+              DTS:DTSID="{BFBB6096-36F7-4646-ACD2-E0759873D8BA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="11"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CurrentFlag"
+              DTS:DTSID="{064A6601-C6DE-48A0-ACD4-5D441F465AAA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="72"
+              DTS:TextQualified="True"
+              DTS:ObjectName="rowguid"
+              DTS:DTSID="{9600B9F3-105E-4837-8566-6A777650581C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ModifiedDate"
+              DTS:DTSID="{CACA6EE1-646E-405E-9EC3-F7467526A404}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="12"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Levels"
+              DTS:DTSID="{DFCF56A5-2403-473C-8A87-8B247BF5F608}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Title"
+              DTS:DTSID="{F1E9FD12-F2BA-4E2D-9380-A990B653E8AB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="LoadDate"
+              DTS:DTSID="{EAFC05F2-A2B7-46BC-BE65-7A9C4BA5E69A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ID"
+              DTS:DTSID="{04F813AC-2FA1-4E58-B387-780F638603E3}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LAKSHMI\MSSQLSERVER01.AdventureWorks2017]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{AB89A533-2C72-4510-972D-042CE92FD855}"
+      DTS:ObjectName="LAKSHMI\MSSQLSERVER01.AdventureWorks2017">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=LAKSHMI\MSSQLSERVER01;Initial Catalog=AdventureWorks2017;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{AB89A533-2C72-4510-972D-042CE92FD855}LAKSHMI\MSSQLSERVER01.AdventureWorks2017;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\DFT_Multiple_Transformations"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{1D3DCC92-CCA6-46E1-BB41-52E3EEE51315}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DFT_Multiple_Transformations"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\DFT_Multiple_Transformations\Copy Column"
+              componentClassID="Microsoft.CopyMap"
+              contactInfo="Copy Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Copies input columns to new columns in the transformation output. For example, create a copy of the 'address' column so that it can be cleaned by subsequent transformations and leave the original column in place for auditing."
+              name="Copy Column">
+              <inputs>
+                <input
+                  refId="Package\DFT_Multiple_Transformations\Copy Column.Inputs[Copy Column Input]"
+                  name="Copy Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_Multiple_Transformations\Copy Column.Inputs[Copy Column Input].Columns[BusinessEntityID]"
+                      cachedDataType="i4"
+                      cachedName="BusinessEntityID"
+                      lineageId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].Columns[BusinessEntityID]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_Multiple_Transformations\Copy Column.Outputs[Copy Column Output]"
+                  name="Copy Column Output"
+                  synchronousInputId="Package\DFT_Multiple_Transformations\Copy Column.Inputs[Copy Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Multiple_Transformations\Copy Column.Outputs[Copy Column Output].Columns[ID]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Multiple_Transformations\Copy Column.Outputs[Copy Column Output].Columns[ID]"
+                      name="ID">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the column to copy."
+                          name="copyColumnId">#{Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].Columns[BusinessEntityID]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_Multiple_Transformations\Create_a_new_columns"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Create_a_new_columns"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DFT_Multiple_Transformations\Create_a_new_columns.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_Multiple_Transformations\Create_a_new_columns.Inputs[Derived Column Input].Columns[HireDate]"
+                      cachedDataType="dbDate"
+                      cachedName="HireDate"
+                      lineageId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].Columns[HireDate]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_Multiple_Transformations\Create_a_new_columns.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\DFT_Multiple_Transformations\Create_a_new_columns.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Multiple_Transformations\Create_a_new_columns.Outputs[Derived Column Output].Columns[Levels]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="12"
+                      lineageId="Package\DFT_Multiple_Transformations\Create_a_new_columns.Outputs[Derived Column Output].Columns[Levels]"
+                      name="Levels"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">((DT_WSTR,20)#{Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].Columns[HireDate]} &gt;= "2006-01-01" &amp;&amp; (DT_WSTR,20)#{Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].Columns[HireDate]} &lt;= "2008-12-31" ? "Senior" : ((DT_WSTR,20)#{Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].Columns[HireDate]} &gt;= "2009-01-01" &amp;&amp; (DT_WSTR,20)#{Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].Columns[HireDate]} &lt;= "2010-12-31") ? "Intermediate" : (DT_WSTR,20)#{Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].Columns[HireDate]} &gt;= "2011-01-01" &amp;&amp; (DT_WSTR,20)#{Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].Columns[HireDate]} &lt;= "2013-12-31" ? "Junior" : "")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">((DT_WSTR,20)HireDate &gt;= "2006-01-01" &amp;&amp; (DT_WSTR,20)HireDate &lt;= "2008-12-31" ? "Senior" : ((DT_WSTR,20)HireDate &gt;= "2009-01-01" &amp;&amp; (DT_WSTR,20)HireDate &lt;= "2010-12-31") ? "Intermediate" : (DT_WSTR,20)HireDate &gt;= "2011-01-01" &amp;&amp; (DT_WSTR,20)HireDate &lt;= "2013-12-31" ? "Junior" : "")</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Multiple_Transformations\Create_a_new_columns.Outputs[Derived Column Output].Columns[Title]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\DFT_Multiple_Transformations\Create_a_new_columns.Outputs[Derived Column Output].Columns[Title]"
+                      name="Title"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_STR,50,1252)""</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_STR,50,1252)""</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Multiple_Transformations\Create_a_new_columns.Outputs[Derived Column Output].Columns[LoadDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DFT_Multiple_Transformations\Create_a_new_columns.Outputs[Derived Column Output].Columns[LoadDate]"
+                      name="LoadDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[GETDATE]()</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">GETDATE()</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT_Multiple_Transformations\Create_a_new_columns.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\DFT_Multiple_Transformations\Create_a_new_columns.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Multiple_Transformations\Create_a_new_columns.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Multiple_Transformations\Create_a_new_columns.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_Multiple_Transformations\Create_a_new_columns.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Multiple_Transformations\Create_a_new_columns.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_Multiple_Transformations\Employees_data"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Employees_data"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[HumanResources].[Employee]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT_Multiple_Transformations\Employees_data.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LAKSHMI\MSSQLSERVER01.AdventureWorks2017]"
+                  connectionManagerRefId="Package.ConnectionManagers[LAKSHMI\MSSQLSERVER01.AdventureWorks2017]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].Columns[BusinessEntityID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].ExternalColumns[BusinessEntityID]"
+                      lineageId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].Columns[BusinessEntityID]"
+                      name="BusinessEntityID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].Columns[JobTitle]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].ExternalColumns[JobTitle]"
+                      length="50"
+                      lineageId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].Columns[JobTitle]"
+                      name="JobTitle"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].Columns[NationalIDNumber]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].ExternalColumns[NationalIDNumber]"
+                      length="15"
+                      lineageId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].Columns[NationalIDNumber]"
+                      name="NationalIDNumber"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].Columns[LoginID]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].ExternalColumns[LoginID]"
+                      length="256"
+                      lineageId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].Columns[LoginID]"
+                      name="LoginID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].Columns[OrganizationNode]"
+                      dataType="bytes"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].ExternalColumns[OrganizationNode]"
+                      length="892"
+                      lineageId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].Columns[OrganizationNode]"
+                      name="OrganizationNode"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].Columns[OrganizationLevel]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].ExternalColumns[OrganizationLevel]"
+                      lineageId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].Columns[OrganizationLevel]"
+                      name="OrganizationLevel"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].Columns[BirthDate]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].ExternalColumns[BirthDate]"
+                      lineageId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].Columns[BirthDate]"
+                      name="BirthDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].Columns[MaritalStatus]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].ExternalColumns[MaritalStatus]"
+                      length="1"
+                      lineageId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].Columns[MaritalStatus]"
+                      name="MaritalStatus"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].Columns[Gender]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].ExternalColumns[Gender]"
+                      length="1"
+                      lineageId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].Columns[Gender]"
+                      name="Gender"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].Columns[HireDate]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].ExternalColumns[HireDate]"
+                      lineageId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].Columns[HireDate]"
+                      name="HireDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].Columns[SalariedFlag]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].ExternalColumns[SalariedFlag]"
+                      lineageId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].Columns[SalariedFlag]"
+                      name="SalariedFlag"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].Columns[VacationHours]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].ExternalColumns[VacationHours]"
+                      lineageId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].Columns[VacationHours]"
+                      name="VacationHours"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].Columns[SickLeaveHours]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].ExternalColumns[SickLeaveHours]"
+                      lineageId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].Columns[SickLeaveHours]"
+                      name="SickLeaveHours"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].Columns[CurrentFlag]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].ExternalColumns[CurrentFlag]"
+                      lineageId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].Columns[CurrentFlag]"
+                      name="CurrentFlag"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].Columns[rowguid]"
+                      dataType="guid"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].ExternalColumns[rowguid]"
+                      lineageId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].Columns[rowguid]"
+                      name="rowguid"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].Columns[ModifiedDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].ExternalColumns[ModifiedDate]"
+                      lineageId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].Columns[ModifiedDate]"
+                      name="ModifiedDate"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].ExternalColumns[BusinessEntityID]"
+                      dataType="i4"
+                      name="BusinessEntityID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].ExternalColumns[JobTitle]"
+                      dataType="wstr"
+                      length="50"
+                      name="JobTitle" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].ExternalColumns[NationalIDNumber]"
+                      dataType="wstr"
+                      length="15"
+                      name="NationalIDNumber" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].ExternalColumns[LoginID]"
+                      dataType="wstr"
+                      length="256"
+                      name="LoginID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].ExternalColumns[OrganizationNode]"
+                      dataType="bytes"
+                      length="892"
+                      name="OrganizationNode" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].ExternalColumns[OrganizationLevel]"
+                      dataType="i2"
+                      name="OrganizationLevel" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].ExternalColumns[BirthDate]"
+                      dataType="dbDate"
+                      name="BirthDate" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].ExternalColumns[MaritalStatus]"
+                      dataType="wstr"
+                      length="1"
+                      name="MaritalStatus" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].ExternalColumns[Gender]"
+                      dataType="wstr"
+                      length="1"
+                      name="Gender" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].ExternalColumns[HireDate]"
+                      dataType="dbDate"
+                      name="HireDate" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].ExternalColumns[SalariedFlag]"
+                      dataType="bool"
+                      name="SalariedFlag" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].ExternalColumns[VacationHours]"
+                      dataType="i2"
+                      name="VacationHours" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].ExternalColumns[SickLeaveHours]"
+                      dataType="i2"
+                      name="SickLeaveHours" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].ExternalColumns[CurrentFlag]"
+                      dataType="bool"
+                      name="CurrentFlag" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].ExternalColumns[rowguid]"
+                      dataType="guid"
+                      name="rowguid" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].ExternalColumns[ModifiedDate]"
+                      dataType="dbTimeStamp"
+                      name="ModifiedDate" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Error Output].Columns[BusinessEntityID]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Error Output].Columns[BusinessEntityID]"
+                      name="BusinessEntityID" />
+                    <outputColumn
+                      refId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Error Output].Columns[NationalIDNumber]"
+                      dataType="wstr"
+                      length="15"
+                      lineageId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Error Output].Columns[NationalIDNumber]"
+                      name="NationalIDNumber" />
+                    <outputColumn
+                      refId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Error Output].Columns[LoginID]"
+                      dataType="wstr"
+                      length="256"
+                      lineageId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Error Output].Columns[LoginID]"
+                      name="LoginID" />
+                    <outputColumn
+                      refId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Error Output].Columns[OrganizationNode]"
+                      dataType="bytes"
+                      length="892"
+                      lineageId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Error Output].Columns[OrganizationNode]"
+                      name="OrganizationNode" />
+                    <outputColumn
+                      refId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Error Output].Columns[OrganizationLevel]"
+                      dataType="i2"
+                      lineageId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Error Output].Columns[OrganizationLevel]"
+                      name="OrganizationLevel" />
+                    <outputColumn
+                      refId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Error Output].Columns[JobTitle]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Error Output].Columns[JobTitle]"
+                      name="JobTitle" />
+                    <outputColumn
+                      refId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Error Output].Columns[BirthDate]"
+                      dataType="dbDate"
+                      lineageId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Error Output].Columns[BirthDate]"
+                      name="BirthDate" />
+                    <outputColumn
+                      refId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Error Output].Columns[MaritalStatus]"
+                      dataType="wstr"
+                      length="1"
+                      lineageId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Error Output].Columns[MaritalStatus]"
+                      name="MaritalStatus" />
+                    <outputColumn
+                      refId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Error Output].Columns[Gender]"
+                      dataType="wstr"
+                      length="1"
+                      lineageId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Error Output].Columns[Gender]"
+                      name="Gender" />
+                    <outputColumn
+                      refId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Error Output].Columns[HireDate]"
+                      dataType="dbDate"
+                      lineageId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Error Output].Columns[HireDate]"
+                      name="HireDate" />
+                    <outputColumn
+                      refId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Error Output].Columns[SalariedFlag]"
+                      dataType="bool"
+                      lineageId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Error Output].Columns[SalariedFlag]"
+                      name="SalariedFlag" />
+                    <outputColumn
+                      refId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Error Output].Columns[VacationHours]"
+                      dataType="i2"
+                      lineageId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Error Output].Columns[VacationHours]"
+                      name="VacationHours" />
+                    <outputColumn
+                      refId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Error Output].Columns[SickLeaveHours]"
+                      dataType="i2"
+                      lineageId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Error Output].Columns[SickLeaveHours]"
+                      name="SickLeaveHours" />
+                    <outputColumn
+                      refId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Error Output].Columns[CurrentFlag]"
+                      dataType="bool"
+                      lineageId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Error Output].Columns[CurrentFlag]"
+                      name="CurrentFlag" />
+                    <outputColumn
+                      refId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Error Output].Columns[rowguid]"
+                      dataType="guid"
+                      lineageId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Error Output].Columns[rowguid]"
+                      name="rowguid" />
+                    <outputColumn
+                      refId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Error Output].Columns[ModifiedDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Error Output].Columns[ModifiedDate]"
+                      name="ModifiedDate" />
+                    <outputColumn
+                      refId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_Multiple_Transformations\Flat File Destination"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Destination"
+              localeId="1033"
+              name="Flat File Destination"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT_Multiple_Transformations\Flat File Destination.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT_Multiple_Transformations\Flat File Destination.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_Multiple_Transformations\Flat File Destination.Inputs[Flat File Destination Input].Columns[BusinessEntityID]"
+                      cachedDataType="i4"
+                      cachedName="BusinessEntityID"
+                      externalMetadataColumnId="Package\DFT_Multiple_Transformations\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[BusinessEntityID]"
+                      lineageId="Package\DFT_Multiple_Transformations\Sort.Outputs[Sort Output].Columns[BusinessEntityID]" />
+                    <inputColumn
+                      refId="Package\DFT_Multiple_Transformations\Flat File Destination.Inputs[Flat File Destination Input].Columns[JobTitle]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="JobTitle"
+                      externalMetadataColumnId="Package\DFT_Multiple_Transformations\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[JobTitle]"
+                      lineageId="Package\DFT_Multiple_Transformations\Sort.Outputs[Sort Output].Columns[JobTitle]" />
+                    <inputColumn
+                      refId="Package\DFT_Multiple_Transformations\Flat File Destination.Inputs[Flat File Destination Input].Columns[NationalIDNumber]"
+                      cachedDataType="wstr"
+                      cachedLength="15"
+                      cachedName="NationalIDNumber"
+                      externalMetadataColumnId="Package\DFT_Multiple_Transformations\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[NationalIDNumber]"
+                      lineageId="Package\DFT_Multiple_Transformations\Sort.Outputs[Sort Output].Columns[NationalIDNumber]" />
+                    <inputColumn
+                      refId="Package\DFT_Multiple_Transformations\Flat File Destination.Inputs[Flat File Destination Input].Columns[LoginID]"
+                      cachedDataType="wstr"
+                      cachedLength="256"
+                      cachedName="LoginID"
+                      externalMetadataColumnId="Package\DFT_Multiple_Transformations\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[LoginID]"
+                      lineageId="Package\DFT_Multiple_Transformations\Sort.Outputs[Sort Output].Columns[LoginID]" />
+                    <inputColumn
+                      refId="Package\DFT_Multiple_Transformations\Flat File Destination.Inputs[Flat File Destination Input].Columns[OrganizationNode]"
+                      cachedDataType="bytes"
+                      cachedLength="892"
+                      cachedName="OrganizationNode"
+                      externalMetadataColumnId="Package\DFT_Multiple_Transformations\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[OrganizationNode]"
+                      lineageId="Package\DFT_Multiple_Transformations\Sort.Outputs[Sort Output].Columns[OrganizationNode]" />
+                    <inputColumn
+                      refId="Package\DFT_Multiple_Transformations\Flat File Destination.Inputs[Flat File Destination Input].Columns[OrganizationLevel]"
+                      cachedDataType="i2"
+                      cachedName="OrganizationLevel"
+                      externalMetadataColumnId="Package\DFT_Multiple_Transformations\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[OrganizationLevel]"
+                      lineageId="Package\DFT_Multiple_Transformations\Sort.Outputs[Sort Output].Columns[OrganizationLevel]" />
+                    <inputColumn
+                      refId="Package\DFT_Multiple_Transformations\Flat File Destination.Inputs[Flat File Destination Input].Columns[BirthDate]"
+                      cachedDataType="dbDate"
+                      cachedName="BirthDate"
+                      externalMetadataColumnId="Package\DFT_Multiple_Transformations\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[BirthDate]"
+                      lineageId="Package\DFT_Multiple_Transformations\Sort.Outputs[Sort Output].Columns[BirthDate]" />
+                    <inputColumn
+                      refId="Package\DFT_Multiple_Transformations\Flat File Destination.Inputs[Flat File Destination Input].Columns[MaritalStatus]"
+                      cachedDataType="wstr"
+                      cachedLength="1"
+                      cachedName="MaritalStatus"
+                      externalMetadataColumnId="Package\DFT_Multiple_Transformations\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[MaritalStatus]"
+                      lineageId="Package\DFT_Multiple_Transformations\Sort.Outputs[Sort Output].Columns[MaritalStatus]" />
+                    <inputColumn
+                      refId="Package\DFT_Multiple_Transformations\Flat File Destination.Inputs[Flat File Destination Input].Columns[Gender]"
+                      cachedDataType="wstr"
+                      cachedLength="1"
+                      cachedName="Gender"
+                      externalMetadataColumnId="Package\DFT_Multiple_Transformations\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Gender]"
+                      lineageId="Package\DFT_Multiple_Transformations\Sort.Outputs[Sort Output].Columns[Gender]" />
+                    <inputColumn
+                      refId="Package\DFT_Multiple_Transformations\Flat File Destination.Inputs[Flat File Destination Input].Columns[HireDate]"
+                      cachedDataType="dbDate"
+                      cachedName="HireDate"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\DFT_Multiple_Transformations\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[HireDate]"
+                      lineageId="Package\DFT_Multiple_Transformations\Sort.Outputs[Sort Output].Columns[HireDate]" />
+                    <inputColumn
+                      refId="Package\DFT_Multiple_Transformations\Flat File Destination.Inputs[Flat File Destination Input].Columns[SalariedFlag]"
+                      cachedDataType="bool"
+                      cachedName="SalariedFlag"
+                      externalMetadataColumnId="Package\DFT_Multiple_Transformations\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[SalariedFlag]"
+                      lineageId="Package\DFT_Multiple_Transformations\Sort.Outputs[Sort Output].Columns[SalariedFlag]" />
+                    <inputColumn
+                      refId="Package\DFT_Multiple_Transformations\Flat File Destination.Inputs[Flat File Destination Input].Columns[VacationHours]"
+                      cachedDataType="i2"
+                      cachedName="VacationHours"
+                      externalMetadataColumnId="Package\DFT_Multiple_Transformations\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[VacationHours]"
+                      lineageId="Package\DFT_Multiple_Transformations\Sort.Outputs[Sort Output].Columns[VacationHours]" />
+                    <inputColumn
+                      refId="Package\DFT_Multiple_Transformations\Flat File Destination.Inputs[Flat File Destination Input].Columns[SickLeaveHours]"
+                      cachedDataType="i2"
+                      cachedName="SickLeaveHours"
+                      externalMetadataColumnId="Package\DFT_Multiple_Transformations\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[SickLeaveHours]"
+                      lineageId="Package\DFT_Multiple_Transformations\Sort.Outputs[Sort Output].Columns[SickLeaveHours]" />
+                    <inputColumn
+                      refId="Package\DFT_Multiple_Transformations\Flat File Destination.Inputs[Flat File Destination Input].Columns[CurrentFlag]"
+                      cachedDataType="bool"
+                      cachedName="CurrentFlag"
+                      externalMetadataColumnId="Package\DFT_Multiple_Transformations\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[CurrentFlag]"
+                      lineageId="Package\DFT_Multiple_Transformations\Sort.Outputs[Sort Output].Columns[CurrentFlag]" />
+                    <inputColumn
+                      refId="Package\DFT_Multiple_Transformations\Flat File Destination.Inputs[Flat File Destination Input].Columns[rowguid]"
+                      cachedDataType="guid"
+                      cachedName="rowguid"
+                      externalMetadataColumnId="Package\DFT_Multiple_Transformations\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[rowguid]"
+                      lineageId="Package\DFT_Multiple_Transformations\Sort.Outputs[Sort Output].Columns[rowguid]" />
+                    <inputColumn
+                      refId="Package\DFT_Multiple_Transformations\Flat File Destination.Inputs[Flat File Destination Input].Columns[ModifiedDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="ModifiedDate"
+                      externalMetadataColumnId="Package\DFT_Multiple_Transformations\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ModifiedDate]"
+                      lineageId="Package\DFT_Multiple_Transformations\Sort.Outputs[Sort Output].Columns[ModifiedDate]" />
+                    <inputColumn
+                      refId="Package\DFT_Multiple_Transformations\Flat File Destination.Inputs[Flat File Destination Input].Columns[Levels]"
+                      cachedDataType="wstr"
+                      cachedLength="12"
+                      cachedName="Levels"
+                      externalMetadataColumnId="Package\DFT_Multiple_Transformations\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Levels]"
+                      lineageId="Package\DFT_Multiple_Transformations\Sort.Outputs[Sort Output].Columns[Levels]" />
+                    <inputColumn
+                      refId="Package\DFT_Multiple_Transformations\Flat File Destination.Inputs[Flat File Destination Input].Columns[Title]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Title"
+                      externalMetadataColumnId="Package\DFT_Multiple_Transformations\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Title]"
+                      lineageId="Package\DFT_Multiple_Transformations\Sort.Outputs[Sort Output].Columns[Title]" />
+                    <inputColumn
+                      refId="Package\DFT_Multiple_Transformations\Flat File Destination.Inputs[Flat File Destination Input].Columns[LoadDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="LoadDate"
+                      externalMetadataColumnId="Package\DFT_Multiple_Transformations\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[LoadDate]"
+                      lineageId="Package\DFT_Multiple_Transformations\Sort.Outputs[Sort Output].Columns[LoadDate]" />
+                    <inputColumn
+                      refId="Package\DFT_Multiple_Transformations\Flat File Destination.Inputs[Flat File Destination Input].Columns[ID]"
+                      cachedDataType="i4"
+                      cachedName="ID"
+                      externalMetadataColumnId="Package\DFT_Multiple_Transformations\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ID]"
+                      lineageId="Package\DFT_Multiple_Transformations\Sort.Outputs[Sort Output].Columns[ID]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT_Multiple_Transformations\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[BusinessEntityID]"
+                      dataType="i4"
+                      name="BusinessEntityID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Multiple_Transformations\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[JobTitle]"
+                      dataType="wstr"
+                      length="50"
+                      name="JobTitle" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Multiple_Transformations\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[NationalIDNumber]"
+                      dataType="wstr"
+                      length="15"
+                      name="NationalIDNumber" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Multiple_Transformations\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[LoginID]"
+                      dataType="wstr"
+                      length="256"
+                      name="LoginID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Multiple_Transformations\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[OrganizationNode]"
+                      dataType="bytes"
+                      length="892"
+                      name="OrganizationNode" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Multiple_Transformations\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[OrganizationLevel]"
+                      dataType="i2"
+                      name="OrganizationLevel" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Multiple_Transformations\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[BirthDate]"
+                      dataType="dbDate"
+                      name="BirthDate" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Multiple_Transformations\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[MaritalStatus]"
+                      dataType="wstr"
+                      length="1"
+                      name="MaritalStatus" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Multiple_Transformations\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Gender]"
+                      dataType="wstr"
+                      length="1"
+                      name="Gender" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Multiple_Transformations\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[HireDate]"
+                      dataType="dbDate"
+                      name="HireDate" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Multiple_Transformations\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[SalariedFlag]"
+                      dataType="bool"
+                      name="SalariedFlag" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Multiple_Transformations\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[VacationHours]"
+                      dataType="i2"
+                      name="VacationHours" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Multiple_Transformations\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[SickLeaveHours]"
+                      dataType="i2"
+                      name="SickLeaveHours" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Multiple_Transformations\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[CurrentFlag]"
+                      dataType="bool"
+                      name="CurrentFlag" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Multiple_Transformations\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[rowguid]"
+                      dataType="guid"
+                      name="rowguid" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Multiple_Transformations\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ModifiedDate]"
+                      dataType="dbTimeStamp"
+                      name="ModifiedDate" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Multiple_Transformations\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Levels]"
+                      dataType="wstr"
+                      length="12"
+                      name="Levels" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Multiple_Transformations\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Title]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Title" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Multiple_Transformations\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[LoadDate]"
+                      dataType="dbTimeStamp"
+                      name="LoadDate" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Multiple_Transformations\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ID]"
+                      dataType="i4"
+                      name="ID" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\DFT_Multiple_Transformations\Script Component"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum.;Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;12"
+              description="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum."
+              name="Script Component"
+              version="12">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Stores the source code of the component"
+                  isArray="true"
+                  name="SourceCode"
+                  state="cdata">
+                  <arrayElements
+                    arrayElementCount="30">
+                    <arrayElement
+                      dataType="System.String"><![CDATA[main.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[#region Help:  Introduction to the Script Component
+/* The Script Component allows you to perform virtually any operation that can be accomplished in
+ * a .Net application within the context of an Integration Services data flow.
+ *
+ * Expand the other regions which have "Help" prefixes for examples of specific ways to use
+ * Integration Services features within this script component. */
+#endregion
+
+#region Namespaces
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+using Microsoft.SqlServer.Dts.Runtime.Wrapper;
+#endregion
+
+/// <summary>
+/// This is the class to which to add your code.  Do not change the name, attributes, or parent
+/// of this class.
+/// </summary>
+[Microsoft.SqlServer.Dts.Pipeline.SSISScriptComponentEntryPointAttribute]
+public class ScriptMain : UserComponent
+{
+    #region Help:  Using Integration Services variables and parameters
+    /* To use a variable in this script, first ensure that the variable has been added to
+     * either the list contained in the ReadOnlyVariables property or the list contained in
+     * the ReadWriteVariables property of this script component, according to whether or not your
+     * code needs to write into the variable.  To do so, save this script, close this instance of
+     * Visual Studio, and update the ReadOnlyVariables and ReadWriteVariables properties in the
+     * Script Transformation Editor window.
+     * To use a parameter in this script, follow the same steps. Parameters are always read-only.
+     *
+     * Example of reading from a variable or parameter:
+     *  DateTime startTime = Variables.MyStartTime;
+     *
+     * Example of writing to a variable:
+     *  Variables.myStringVariable = "new value";
+     */
+    #endregion
+
+    #region Help:  Using Integration Services Connnection Managers
+    /* Some types of connection managers can be used in this script component.  See the help topic
+     * "Working with Connection Managers Programatically" for details.
+     *
+     * To use a connection manager in this script, first ensure that the connection manager has
+     * been added to either the list of connection managers on the Connection Managers page of the
+     * script component editor.  To add the connection manager, save this script, close this instance of
+     * Visual Studio, and add the Connection Manager to the list.
+     *
+     * If the component needs to hold a connection open while processing rows, override the
+     * AcquireConnections and ReleaseConnections methods.
+     * 
+     * Example of using an ADO.Net connection manager to acquire a SqlConnection:
+     *  object rawConnection = Connections.SalesDB.AcquireConnection(transaction);
+     *  SqlConnection salesDBConn = (SqlConnection)rawConnection;
+     *
+     * Example of using a File connection manager to acquire a file path:
+     *  object rawConnection = Connections.Prices_zip.AcquireConnection(transaction);
+     *  string filePath = (string)rawConnection;
+     *
+     * Example of releasing a connection manager:
+     *  Connections.SalesDB.ReleaseConnection(rawConnection);
+     */
+    #endregion
+
+    #region Help:  Firing Integration Services Events
+    /* This script component can fire events.
+     *
+     * Example of firing an error event:
+     *  ComponentMetaData.FireError(10, "Process Values", "Bad value", "", 0, out cancel);
+     *
+     * Example of firing an information event:
+     *  ComponentMetaData.FireInformation(10, "Process Values", "Processing has started", "", 0, fireAgain);
+     *
+     * Example of firing a warning event:
+     *  ComponentMetaData.FireWarning(10, "Process Values", "No rows were received", "", 0);
+     */
+    #endregion
+
+    /// <summary>
+    /// This method is called once, before rows begin to be processed in the data flow.
+    ///
+    /// You can remove this method if you don't need to do anything here.
+    /// </summary>
+    public override void PreExecute()
+    {
+        base.PreExecute();
+        /*
+         * Add your code here
+         */
+    }
+
+    /// <summary>
+    /// This method is called after all the rows have passed through this component.
+    ///
+    /// You can delete this method if you don't need to do anything here.
+    /// </summary>
+    public override void PostExecute()
+    {
+        base.PostExecute();
+        /*
+         * Add your code here
+         */
+    }
+
+    /// <summary>
+    /// This method is called once for every row that passes through the component from Input0.
+    ///
+    /// Example of reading a value from a column in the the row:
+    ///  string zipCode = Row.ZipCode
+    ///
+    /// Example of writing a value to a column in the row:
+    ///  Row.ZipCode = zipCode
+    /// </summary>
+    /// <param name="Row">The row that is currently passing through the component</param>
+    public override void Input0_ProcessInputRow(Input0Buffer Row)
+    {
+        if (Row.Gender == "M" && Row.MaritalStatus == "S")
+        {
+            Row.Title = "Master";
+        }
+        else if (Row.Gender == "M" && Row.MaritalStatus == "M")
+        {
+            Row.Title = "Mister";
+        }
+        else if (Row.Gender == "F" && Row.MaritalStatus == "S")
+        {
+            Row.Title = "Miss";
+        }
+        else if (Row.Gender == "F" && Row.MaritalStatus == "M")
+        {
+            Row.Title = "Misses";
+        }
+    }
+
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[SC_e0f1fd8fec4a4c6287f23415d82ed7a7.csproj]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5c0405ad-8313-4b32-aa49-94d1f0a9563d}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SC_e0f1fd8fec4a4c6287f23415d82ed7a7</RootNamespace>
+    <AssemblyName>SC_e0f1fd8fec4a4c6287f23415d82ed7a7</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.SqlServer.TxScript, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.DTSRuntimeWrap, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.DTSPipelineWrap, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.PipelineHost, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Compile Include="main.cs" />
+    <Compile Include="BufferWrapper.cs" />
+    <Compile Include="ComponentWrapper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <!-- Include the build rules for a C# project.-->
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- This section defines VSTA properties that describe the host-changable project properties. -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}">
+        <ProjectProperties HostName="ScriptComponent" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="cs" TemplatesPath="" DebugInfoExeName="" DebugInfoCommandLine="" DebugInfoWorkingDir="" IconImageList="" />
+        <Host Name="ScriptComponent" GeneratedNamespace="SC_e0f1fd8fec4a4c6287f23415d82ed7a7" IconIndex="0"></Host>
+        <ProjectClient>
+          <HostIdentifier>SSIS_SC150</HostIdentifier>
+        </ProjectClient>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Resources.resx]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+</root>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[BufferWrapper.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[/* THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
+*  Microsoft SQL Server Integration Services buffer wrappers
+*  This module defines classes for accessing data flow buffers
+*  THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT! */
+
+
+
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Pipeline;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+
+public class Input0Buffer: ScriptBuffer
+
+{
+    public Input0Buffer(PipelineBuffer Buffer, int[] BufferColumnIndexes, OutputNameMap OutputMap)
+        : base(Buffer, BufferColumnIndexes, OutputMap)
+    {
+    }
+
+    public String MaritalStatus
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[0]);
+        }
+    }
+    public bool MaritalStatus_IsNull
+    {
+        get
+        {
+            return IsNull(0);
+        }
+    }
+
+    public String Gender
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[1]);
+        }
+    }
+    public bool Gender_IsNull
+    {
+        get
+        {
+            return IsNull(1);
+        }
+    }
+
+    public String Title
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[2]);
+        }
+        set
+        {
+            this[2] = value;
+        }
+    }
+    public bool Title_IsNull
+    {
+        get
+        {
+            return IsNull(2);
+        }
+        set
+        {
+            if (value)
+            {
+                SetNull(2);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    new public bool NextRow()
+    {
+        return base.NextRow();
+    }
+
+    new public bool EndOfRowset()
+    {
+        return base.EndOfRowset();
+    }
+
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Settings.Designer.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_e0f1fd8fec4a4c6287f23415d82ed7a7.Properties.Settings.get_Default():SC_e0f1fd8fec4a4c6287f23415d82ed7a7.Properties.Sett" +
+    "ings")]
+
+namespace SC_e0f1fd8fec4a4c6287f23415d82ed7a7.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[ComponentWrapper.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[/* THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
+*  Microsoft SQL Server Integration Services component wrapper
+*  This module defines the base class for your component
+*  THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT! */
+
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Pipeline;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+using Microsoft.SqlServer.Dts.Runtime.Wrapper;
+
+public class UserComponent: ScriptComponent
+{
+    public Connections Connections;
+    public Variables Variables;
+    public UserComponent()
+    {
+        Connections = new Connections(this);
+        Variables = new Variables(this);
+    }
+
+    public override void ProcessInput(int InputID, string InputName, PipelineBuffer Buffer, OutputNameMap OutputMap)
+    {
+
+        if (InputName.Equals(@"Input 0", StringComparison.Ordinal))
+        {
+            Input0_ProcessInput(new Input0Buffer(Buffer, GetColumnIndexes(InputID), OutputMap));
+        }
+
+    }
+
+    public virtual void Input0_ProcessInput(Input0Buffer Buffer)
+    {
+        while (Buffer.NextRow())
+        {
+            Input0_ProcessInputRow(Buffer);
+        }
+    }
+
+    public virtual void Input0_ProcessInputRow(Input0Buffer Row)
+    {
+    }
+
+}
+
+public class Connections
+{
+    ScriptComponent ParentComponent;
+
+    public Connections(ScriptComponent Component)
+    {
+        ParentComponent = Component;
+    }
+
+}
+
+public class Variables
+{
+    ScriptComponent ParentComponent;
+
+    public Variables(ScriptComponent Component)
+    {
+        ParentComponent = Component;
+    }
+
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Project]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF16LE]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="3.0" schemaVersion="1.0">
+  <msb:PropertyGroup>
+    <msb:Language>msBuild</msb:Language>
+    <msb:CodeName>SC_e0f1fd8fec4a4c6287f23415d82ed7a7</msb:CodeName>
+    <msb:DisplayName>SC_e0f1fd8fec4a4c6287f23415d82ed7a7</msb:DisplayName>
+    <msb:ProjectId>{436DF17D-6A80-4B6D-BCFC-FF60D6978E63}</msb:ProjectId>
+  </msb:PropertyGroup>
+  <msb:ItemGroup>
+    <msb:Project Include="SC_e0f1fd8fec4a4c6287f23415d82ed7a7.csproj" />
+    <msb:File Include="Properties\Resources.Designer.cs" />
+    <msb:File Include="Properties\Settings.settings" />
+    <msb:File Include="Properties\AssemblyInfo.cs" />
+    <msb:File Include="Properties\Resources.resx" />
+    <msb:File Include="main.cs" />
+    <msb:File Include="BufferWrapper.cs" />
+    <msb:File Include="Properties\Settings.Designer.cs" />
+    <msb:File Include="ComponentWrapper.cs" />
+  </msb:ItemGroup>
+</c:Project>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\AssemblyInfo.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("SC_e0f1fd8fec4a4c6287f23415d82ed7a7")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("HP Inc.")]
+[assembly: AssemblyProduct("SC_e0f1fd8fec4a4c6287f23415d82ed7a7")]
+[assembly: AssemblyCopyright("Copyright @ HP Inc. 2022")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.0.0")]
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Settings.settings]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Resources.Designer.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_e0f1fd8fec4a4c6287f23415d82ed7a7.Properties.Resources.get_ResourceManager():System.Resources.Resou" +
+    "rceManager")]
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_e0f1fd8fec4a4c6287f23415d82ed7a7.Properties.Resources.get_Culture():System.Globalization.CultureIn" +
+    "fo")]
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_e0f1fd8fec4a4c6287f23415d82ed7a7.Properties.Resources.set_Culture(System.Globalization.CultureInfo" +
+    "):Void")]
+
+namespace SC_e0f1fd8fec4a4c6287f23415d82ed7a7.Properties {
+    
+    
+    /// <summary>
+    ///   A strongly-typed resource class, for looking up localized strings, etc.
+    /// </summary>
+    // This class was auto-generated by the StronglyTypedResourceBuilder
+    // class via a tool like ResGen or Visual Studio.
+    // To add or remove a member, edit your .ResX file then rerun ResGen
+    // with the /str option, or rebuild your VS project.
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    internal class Resources {
+        
+        private static global::System.Resources.ResourceManager resourceMan;
+        
+        private static global::System.Globalization.CultureInfo resourceCulture;
+        
+        [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
+        internal Resources() {
+        }
+        
+        /// <summary>
+        ///   Returns the cached ResourceManager instance used by this class.
+        /// </summary>
+        [global::System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        internal static global::System.Resources.ResourceManager ResourceManager {
+            get {
+                if ((resourceMan == null)) {
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SC_e0f1fd8fec4a4c6287f23415d82ed7a7.Properties.Resources", typeof(Resources).Assembly);
+                    resourceMan = temp;
+                }
+                return resourceMan;
+            }
+        }
+        
+        /// <summary>
+        ///   Overrides the current thread's CurrentUICulture property for all
+        ///   resource lookups using this strongly typed resource class.
+        /// </summary>
+        [global::System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        internal static global::System.Globalization.CultureInfo Culture {
+            get {
+                return resourceCulture;
+            }
+            set {
+                resourceCulture = value;
+            }
+        }
+    }
+}
+]]></arrayElement>
+                  </arrayElements>
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Stores the binary representation of the component"
+                  isArray="true"
+                  name="BinaryCode"
+                  state="cdata">
+                  <arrayElements
+                    arrayElementCount="2">
+                    <arrayElement
+                      dataType="System.String"><![CDATA[SC_e0f1fd8fec4a4c6287f23415d82ed7a7.dll]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDAKlEjmMAAAAAAAAAAOAAIiALATAAABQAAAAIAAAAAAAAijMA
+AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAACAAAAAAgAAAAAAAAMAYIUAABAA
+ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAADgzAABPAAAAAEAAAGQEAAAAAAAAAAAAAAAAAAAA
+AAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAAkBMAAAAgAAAAFAAAAAIA
+AAAAAAAAAAAAAAAAACAAAGAucnNyYwAAAGQEAAAAQAAAAAYAAAAWAAAAAAAAAAAAAAAAAABAAABA
+LnJlbG9jAAAMAAAAAGAAAAACAAAAHAAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAABs
+MwAAAAAAAEgAAAACAAUAoCIAAOAPAAABAAAAAAAAAIAyAAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4CKBAAAAoqHgIoEQAACioTMAIAwAAAAAAAAAADbwgAAAZy
+AQAAcCgSAAAKLB4DbwYAAAZyBQAAcCgSAAAKLAwDcgkAAHBvCwAABioDbwgAAAZyAQAAcCgSAAAK
+LB4DbwYAAAZyAQAAcCgSAAAKLAwDchcAAHBvCwAABioDbwgAAAZyJQAAcCgSAAAKLB4DbwYAAAZy
+BQAAcCgSAAAKLAwDcikAAHBvCwAABioDbwgAAAZyJQAAcCgSAAAKLB0DbwYAAAZyAQAAcCgSAAAK
+LAsDcjMAAHBvCwAABioeAigQAAAGKioCAwQFKBMAAAoqUgJ7FAAACgJ7FQAAChaUbxYAAAoqIgIW
+KBcAAAoqUgJ7FAAACgJ7FQAACheUbxYAAAoqIgIXKBcAAAoqUgJ7FAAACgJ7FQAAChiUbxYAAAoq
+JgIYAygYAAAKKiICGCgXAAAKKloDLAgCGCgZAAAKKnJBAABwcxoAAAp6HgIoGwAACioeAigcAAAK
+Kn4CKB0AAAoCAnMUAAAGfQEAAAQCAnMVAAAGfQIAAAQqkgRy3gAAcBpvHgAACiwVAgUCAygfAAAK
+DgRzBQAABm8SAAAGKkorBwIDbxMAAAYDbw4AAAYt8SoGKjoCKCAAAAoCA30DAAAEKjoCKCAAAAoC
+A30EAAAEKh4CKCAAAAoqrn4FAAAELR5y7gAAcNAHAAACKCEAAApvIgAACnMjAAAKgAUAAAR+BQAA
+BCoafgYAAAQqHgKABgAABCoafgcAAAQqHgIoJAAACioucxsAAAaABwAABCpCU0pCAQABAAAAAAAM
+AAAAdjQuMC4zMDMxOQAAAAAFAGwAAADIBQAAI34AADQGAACABgAAI1N0cmluZ3MAAAAAtAwAAGAB
+AAAjVVMAFA4AABAAAAAjR1VJRAAAACQOAAC8AQAAI0Jsb2IAAAAAAAAAAgAAAVcVoAEJAQAAAPoB
+MwAWAAABAAAAHwAAAAgAAAAHAAAAHAAAAA8AAAAkAAAAEAAAAAMAAAAJAAAADAAAAAEAAAAEAAAA
+AQAAAAAAAQMBAAAAAAAGAPgBmAQGAIwCmAQGAEQBhQQPAAwFAAAGAHEBzwMGANsBzwMGALwBzwMG
+AHMCzwMGABgCzwMGADECzwMGAIgBzwMGAKMBxwIKAEwCkQAKAFcEkQAOAEgEkQAKABgEkQAKAOQF
+kQAGAKcFhwMGACcBhQQGAGgEuAQGAAwEugMSAPcA6wISAFgB6wISAN8ApQMGAAwBmAQGAOQChwMG
+AOEDhwMGAPsDhwMGALIAhwMGAE8AhwMGAGkGzwMAAAAAJQAAAAAAAQABAAEAEACaAwAAEAABAAEA
+AQAQADsEAAA5AAEABQABABAAxgUAAEUAAQAQAAEAEACJBQAASQADABQAAQAQAEoFAABJAAQAFQAA
+ABAAvwQbBUkABQAWAAABEAB5BRsFYQAHABoABgCJBXkABgBKBX0AAQDUBYEAAQDUBYEAEQCOA4UA
+EQDPAIkAEQA/AI0AUCAAAAAAxgCqAgYAAQBYIAAAAADGALUCBgABAGAgAAAAAMYARgaRAAEALCEA
+AAAAhhh4BAYAAgA0IQAAAACGGHgEIQACAD8hAAAAAIYIlQWXAAUAVCEAAAAAhghdA0MABQBdIQAA
+AACGCDAElwAFAHIhAAAAAIYISwNDAAUAeyEAAAAAhghzAJcABQCQIQAAAACGCH0AEAAFAJohAAAA
+AIYIKQNDAAYAoyEAAAAAhgg6A5sABgC6IQAAAACGAF0GQwAHAMIhAAAAAIYArgVDAAcAyiEAAAAA
+hhh4BAYABwDqIQAAAADGADkGoAAHAA8iAAAAAMYBMgaRAAsAIiIAAAAAxgFGBpEADAAkIgAAAACG
+GHgEqgANADMiAAAAAIYYeASqAA4AQiIAAAAAgxh4BAYADwBKIgAAAACTCGQEsAAPAHYiAAAAAJMI
+twC1AA8AfSIAAAAAkwjDALoADwCFIgAAAACWCLoFwAAQAIwiAAAAAIYYeAQGABAAlCIAAAAAkRh+
+BMUAEAAAAAEAYQYAAAEAXQQAAAIAVAUAAAMAJgQAAAEAwQIAAAEAwQIAAAEALgAAAAIAhwAAAAMA
+XQQAAAQAJgQAAAEAXQQAAAEAYQYAAAEA6gUAAAEA6gUAAAEAwQIJAHgEAQARAHgEBgAZAHgECgAp
+AHgEEAAxAHgEEAA5AHgEEABBAHgEEABJAHgEEABRAHgEEABZAHgEEABhAHgEEABpAHgEBgCZAHgE
+BgC5AHgEFQDJAHgEBgCJAKoCBgCJALUCBgDRAHIGGwBxAHgEIQBxAF0EKwBxAFQFLwB5AOECMwBx
+AG8DOABxAH4DPQBxAHYDAQDZAHgEEABxAF0GQwBxAK4FQwCJAHgEBgDRAIIFRwCJAGgFTgCRAHgE
+BgDpAGEAVADpAGUGWwChAHgEYADBAHgEBgAuAAsA4AAuABMA6QAuABsACAEuACMAEQEuACsAOgEu
+ADMAOgEuADsAQAEuAEMAEQEuAEsATQEuAFMAOgEuAFsAawFDAGMAtQHhAHsAtQHjAGsAtQHpAHMA
+CAEJAXMACAEDAAEABwAHAAgACQAAAJkFyQAAAGEDzQAAADQEyQAAAE8DzQAAAIEAyQAAAD4DzQAA
+AGgE0QAAANcA1gAAAL4F2wACAAYAAwACAAcABQACAAgABwACAAkACQACAAoACwABAAsACwACAAwA
+DQABAA0ADQACABcADwACABgAEQABABkAEQACABoAEwAEgAAAAQAAAAAAAAAAAAAAAAABAAAABAAA
+AAAAAAAAAAAAZwA2AAAAAAAPAAAAAAAAAAAAAABwAPQFAAAAAA8AAAAAAAAAAAAAAHAAEQYAAAAA
+BAAAAAAAAAAAAAAAZwCHAwAAAAAAAAAAAQAAAMkEAAAAAAAAAFNDX2UwZjFmZDhmZWM0YTRjNjI4
+N2YyMzQxNWQ4MmVkN2E3ADxNb2R1bGU+AElucHV0SUQAbXNjb3JsaWIAZGVmYXVsdEluc3RhbmNl
+AFJ1bnRpbWVUeXBlSGFuZGxlAEdldFR5cGVGcm9tSGFuZGxlAGdldF9UaXRsZQBzZXRfVGl0bGUA
+SW5wdXROYW1lAE1pY3Jvc29mdC5TcWxTZXJ2ZXIuRHRzLlBpcGVsaW5lAFR5cGUAZ2V0X0N1bHR1
+cmUAc2V0X0N1bHR1cmUAcmVzb3VyY2VDdWx0dXJlAEFwcGxpY2F0aW9uU2V0dGluZ3NCYXNlAEVk
+aXRvckJyb3dzYWJsZVN0YXRlAENvbXBpbGVyR2VuZXJhdGVkQXR0cmlidXRlAERlYnVnZ2VyTm9u
+VXNlckNvZGVBdHRyaWJ1dGUARGVidWdnYWJsZUF0dHJpYnV0ZQBFZGl0b3JCcm93c2FibGVBdHRy
+aWJ1dGUAQXNzZW1ibHlUaXRsZUF0dHJpYnV0ZQBBc3NlbWJseVRyYWRlbWFya0F0dHJpYnV0ZQBU
+YXJnZXRGcmFtZXdvcmtBdHRyaWJ1dGUAQXNzZW1ibHlDb25maWd1cmF0aW9uQXR0cmlidXRlAEFz
+c2VtYmx5RGVzY3JpcHRpb25BdHRyaWJ1dGUAQ29tcGlsYXRpb25SZWxheGF0aW9uc0F0dHJpYnV0
+ZQBBc3NlbWJseVByb2R1Y3RBdHRyaWJ1dGUAQXNzZW1ibHlDb3B5cmlnaHRBdHRyaWJ1dGUAU1NJ
+U1NjcmlwdENvbXBvbmVudEVudHJ5UG9pbnRBdHRyaWJ1dGUAQXNzZW1ibHlDb21wYW55QXR0cmli
+dXRlAFJ1bnRpbWVDb21wYXRpYmlsaXR5QXR0cmlidXRlAFByZUV4ZWN1dGUAUG9zdEV4ZWN1dGUA
+dmFsdWUAU3lzdGVtLlJ1bnRpbWUuVmVyc2lvbmluZwBHZXRTdHJpbmcAU3lzdGVtLkNvbXBvbmVu
+dE1vZGVsAFNDX2UwZjFmZDhmZWM0YTRjNjI4N2YyMzQxNWQ4MmVkN2E3LmRsbABnZXRfVGl0bGVf
+SXNOdWxsAHNldF9UaXRsZV9Jc051bGwAZ2V0X0dlbmRlcl9Jc051bGwAZ2V0X01hcml0YWxTdGF0
+dXNfSXNOdWxsAFNldE51bGwAc2V0X0l0ZW0AU3lzdGVtAHJlc291cmNlTWFuAFNjcmlwdE1haW4A
+U3lzdGVtLkNvbmZpZ3VyYXRpb24AU3lzdGVtLkdsb2JhbGl6YXRpb24AU3lzdGVtLlJlZmxlY3Rp
+b24ASW52YWxpZE9wZXJhdGlvbkV4Y2VwdGlvbgBTdHJpbmdDb21wYXJpc29uAEN1bHR1cmVJbmZv
+AE91dHB1dE5hbWVNYXAAT3V0cHV0TWFwAGdldF9HZW5kZXIASW5wdXQwQnVmZmVyAFBpcGVsaW5l
+QnVmZmVyAFNjcmlwdEJ1ZmZlcgBnZXRfUmVzb3VyY2VNYW5hZ2VyAC5jdG9yAC5jY3RvcgBTeXN0
+ZW0uRGlhZ25vc3RpY3MAU3lzdGVtLlJ1bnRpbWUuQ29tcGlsZXJTZXJ2aWNlcwBTeXN0ZW0uUmVz
+b3VyY2VzAFNDX2UwZjFmZDhmZWM0YTRjNjI4N2YyMzQxNWQ4MmVkN2E3LlByb3BlcnRpZXMuUmVz
+b3VyY2VzLnJlc291cmNlcwBEZWJ1Z2dpbmdNb2RlcwBTQ19lMGYxZmQ4ZmVjNGE0YzYyODdmMjM0
+MTVkODJlZDdhNy5Qcm9wZXJ0aWVzAFZhcmlhYmxlcwBCdWZmZXJDb2x1bW5JbmRleGVzAEdldENv
+bHVtbkluZGV4ZXMAU2V0dGluZ3MARXF1YWxzAENvbm5lY3Rpb25zAGdldF9NYXJpdGFsU3RhdHVz
+AE9iamVjdABFbmRPZlJvd3NldABnZXRfRGVmYXVsdABVc2VyQ29tcG9uZW50AFBhcmVudENvbXBv
+bmVudABTY3JpcHRDb21wb25lbnQATWljcm9zb2Z0LlNxbFNlcnZlci5UeFNjcmlwdABNaWNyb3Nv
+ZnQuU3FsU2VydmVyLlBpcGVsaW5lSG9zdABJbnB1dDBfUHJvY2Vzc0lucHV0AElucHV0MF9Qcm9j
+ZXNzSW5wdXRSb3cATmV4dFJvdwBnZXRfQXNzZW1ibHkAb3BfRXF1YWxpdHkAAAAAA00AAANTAAAN
+TQBhAHMAdABlAHIAAA1NAGkAcwB0AGUAcgAAA0YAAAlNAGkAcwBzAAANTQBpAHMAcwBlAHMAAICb
+SQBzAE4AdQBsAGwAIABwAHIAbwBwAGUAcgB0AHkAIABjAGEAbgBuAG8AdAAgAGIAZQAgAHMAZQB0
+ACAAdABvACAARgBhAGwAcwBlAC4AIABBAHMAcwBpAGcAbgAgAGEAIAB2AGEAbAB1AGUAIAB0AG8A
+IAB0AGgAZQAgAGMAbwBsAHUAbQBuACAAaQBuAHMAdABlAGEAZAAuAAAPSQBuAHAAdQB0ACAAMAAA
+cVMAQwBfAGUAMABmADEAZgBkADgAZgBlAGMANABhADQAYwA2ADIAOAA3AGYAMgAzADQAMQA1AGQA
+OAAyAGUAZAA3AGEANwAuAFAAcgBvAHAAZQByAHQAaQBlAHMALgBSAGUAcwBvAHUAcgBjAGUAcwAA
+H7zBxywTc0i5/1iIYmTfNAAEIAEBCAMgAAEFIAEBEREEIAEBDgUgAQERWQUAAgIODgkgAwESPR0I
+EkEDBhI9AwYdCAQgAQ4IBCABAggFIAIBCBwDIAACBiACAg4RcQUgAR0ICAYAARJ1EXkEIAASfQYg
+AgEOEn0It3pcVhk04IkIiYRdzYCAzJEDBhIUAwYSGAMGEkUDBhJRAwYSVQMGEiAFIAEBEgwDIAAO
+BCABAQIJIAQBCA4SPRJBBSABARJFBAAAElEEAAASVQUAAQESVQQAABIgAwAAAQMoAA4DKAACBAgA
+ElEECAASVQQIABIgCAEACAAAAAAAHgEAAQBUAhZXcmFwTm9uRXhjZXB0aW9uVGhyb3dzAQgBAAIA
+AAAAACgBACNTQ19lMGYxZmQ4ZmVjNGE0YzYyODdmMjM0MTVkODJlZDdhNwAABQEAAAAADAEAB0hQ
+IEluYy4AAB0BABhDb3B5cmlnaHQgQCBIUCBJbmMuIDIwMjIAAEkBABouTkVURnJhbWV3b3JrLFZl
+cnNpb249djQuNwEAVA4URnJhbWV3b3JrRGlzcGxheU5hbWUSLk5FVCBGcmFtZXdvcmsgNC43BAEA
+AAAAALQAAADOyu++AQAAAJEAAABsU3lzdGVtLlJlc291cmNlcy5SZXNvdXJjZVJlYWRlciwgbXNj
+b3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1i
+NzdhNWM1NjE5MzRlMDg5I1N5c3RlbS5SZXNvdXJjZXMuUnVudGltZVJlc291cmNlU2V0AgAAAAAA
+AAAAAAAAUEFEUEFEULQAAABgMwAAAAAAAAAAAAB6MwAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+bDMAAAAAAAAAAAAAAABfQ29yRGxsTWFpbgBtc2NvcmVlLmRsbAAAAAAA/yUAIAAQAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAQAQAAAAGAAAgAAAAAAAAAAAAAAAAAAAAQABAAAAMAAAgAAAAAAAAAAAAAAAAAAAAQAAAAAA
+SAAAAFhAAAAIBAAAAAAAAAAAAAAIBDQAAABWAFMAXwBWAEUAUgBTAEkATwBOAF8ASQBOAEYATwAA
+AAAAvQTv/gAAAQAAAAEAAAAAAAAAAQAAAAAAPwAAAAAAAAAEAAAAAgAAAAAAAAAAAAAAAAAAAEQA
+AAABAFYAYQByAEYAaQBsAGUASQBuAGYAbwAAAAAAJAAEAAAAVAByAGEAbgBzAGwAYQB0AGkAbwBu
+AAAAAAAAALAEaAMAAAEAUwB0AHIAaQBuAGcARgBpAGwAZQBJAG4AZgBvAAAARAMAAAEAMAAwADAA
+MAAwADQAYgAwAAAAGgABAAEAQwBvAG0AbQBlAG4AdABzAAAAAAAAADAACAABAEMAbwBtAHAAYQBu
+AHkATgBhAG0AZQAAAAAASABQACAASQBuAGMALgAAAHAAJAABAEYAaQBsAGUARABlAHMAYwByAGkA
+cAB0AGkAbwBuAAAAAABTAEMAXwBlADAAZgAxAGYAZAA4AGYAZQBjADQAYQA0AGMANgAyADgANwBm
+ADIAMwA0ADEANQBkADgAMgBlAGQANwBhADcAAAAwAAgAAQBGAGkAbABlAFYAZQByAHMAaQBvAG4A
+AAAAADEALgAwAC4AMAAuADAAAABwACgAAQBJAG4AdABlAHIAbgBhAGwATgBhAG0AZQAAAFMAQwBf
+AGUAMABmADEAZgBkADgAZgBlAGMANABhADQAYwA2ADIAOAA3AGYAMgAzADQAMQA1AGQAOAAyAGUA
+ZAA3AGEANwAuAGQAbABsAAAAVgAZAAEATABlAGcAYQBsAEMAbwBwAHkAcgBpAGcAaAB0AAAAQwBv
+AHAAeQByAGkAZwBoAHQAIABAACAASABQACAASQBuAGMALgAgADIAMAAyADIAAAAAACoAAQABAEwA
+ZQBnAGEAbABUAHIAYQBkAGUAbQBhAHIAawBzAAAAAAAAAAAAeAAoAAEATwByAGkAZwBpAG4AYQBs
+AEYAaQBsAGUAbgBhAG0AZQAAAFMAQwBfAGUAMABmADEAZgBkADgAZgBlAGMANABhADQAYwA2ADIA
+OAA3AGYAMgAzADQAMQA1AGQAOAAyAGUAZAA3AGEANwAuAGQAbABsAAAAaAAkAAEAUAByAG8AZAB1
+AGMAdABOAGEAbQBlAAAAAABTAEMAXwBlADAAZgAxAGYAZAA4AGYAZQBjADQAYQA0AGMANgAyADgA
+NwBmADIAMwA0ADEANQBkADgAMgBlAGQANwBhADcAAAA0AAgAAQBQAHIAbwBkAHUAYwB0AFYAZQBy
+AHMAaQBvAG4AAAAxAC4AMAAuADAALgAwAAAAOAAIAAEAQQBzAHMAZQBtAGIAbAB5ACAAVgBlAHIA
+cwBpAG8AbgAAADEALgAwAC4AMAAuADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAMAAAAjDMAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
+                  </arrayElements>
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the Microsoft Visual Studio Tools for Applications project. Project names must be unique within a package."
+                  name="VSTAProjectName"
+                  typeConverter="NOTBROWSABLE">SC_e0f1fd8fec4a4c6287f23415d82ed7a7</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the programming language used by the script."
+                  name="ScriptLanguage"
+                  typeConverter="Microsoft.SqlServer.VSTAHosting.ScriptingLanguages">CSharp</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a comma-separated list of read-only variables."
+                  name="ReadOnlyVariables"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ScriptUIVariablePickerDlg"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a comma-separated list of read/write variables."
+                  name="ReadWriteVariables"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ScriptUIWriteableVariablePickerDlg"></property>
+                <property
+                  dataType="System.String"
+                  description="List of breakpoints present on the script."
+                  isArray="true"
+                  name="BreakpointCollection"
+                  typeConverter="NOTBROWSABLE">
+                  <arrayElements
+                    arrayElementCount="0" />
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Checksum to match component metedata against compiled codes."
+                  name="MetadataChecksum140"
+                  typeConverter="NOTBROWSABLE">D3</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ScriptComponentHost</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\DFT_Multiple_Transformations\Script Component.Inputs[Input 0]"
+                  hasSideEffects="true"
+                  name="Input 0">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_Multiple_Transformations\Script Component.Inputs[Input 0].Columns[MaritalStatus]"
+                      cachedDataType="wstr"
+                      cachedLength="1"
+                      cachedName="MaritalStatus"
+                      lineageId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].Columns[MaritalStatus]" />
+                    <inputColumn
+                      refId="Package\DFT_Multiple_Transformations\Script Component.Inputs[Input 0].Columns[Gender]"
+                      cachedDataType="wstr"
+                      cachedLength="1"
+                      cachedName="Gender"
+                      lineageId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].Columns[Gender]" />
+                    <inputColumn
+                      refId="Package\DFT_Multiple_Transformations\Script Component.Inputs[Input 0].Columns[Title]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Title"
+                      lineageId="Package\DFT_Multiple_Transformations\Create_a_new_columns.Outputs[Derived Column Output].Columns[Title]"
+                      usageType="readWrite" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_Multiple_Transformations\Script Component.Outputs[Output 0]"
+                  name="Output 0"
+                  synchronousInputId="Package\DFT_Multiple_Transformations\Script Component.Inputs[Input 0]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_Multiple_Transformations\Sort"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\DFT_Multiple_Transformations\Sort.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_Multiple_Transformations\Sort.Inputs[Sort Input].Columns[BusinessEntityID]"
+                      cachedDataType="i4"
+                      cachedName="BusinessEntityID"
+                      lineageId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].Columns[BusinessEntityID]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_Multiple_Transformations\Sort.Inputs[Sort Input].Columns[JobTitle]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="JobTitle"
+                      lineageId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].Columns[JobTitle]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_Multiple_Transformations\Sort.Inputs[Sort Input].Columns[NationalIDNumber]"
+                      cachedDataType="wstr"
+                      cachedLength="15"
+                      cachedName="NationalIDNumber"
+                      lineageId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].Columns[NationalIDNumber]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_Multiple_Transformations\Sort.Inputs[Sort Input].Columns[LoginID]"
+                      cachedDataType="wstr"
+                      cachedLength="256"
+                      cachedName="LoginID"
+                      lineageId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].Columns[LoginID]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_Multiple_Transformations\Sort.Inputs[Sort Input].Columns[OrganizationNode]"
+                      cachedDataType="bytes"
+                      cachedLength="892"
+                      cachedName="OrganizationNode"
+                      lineageId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].Columns[OrganizationNode]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_Multiple_Transformations\Sort.Inputs[Sort Input].Columns[OrganizationLevel]"
+                      cachedDataType="i2"
+                      cachedName="OrganizationLevel"
+                      lineageId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].Columns[OrganizationLevel]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_Multiple_Transformations\Sort.Inputs[Sort Input].Columns[BirthDate]"
+                      cachedDataType="dbDate"
+                      cachedName="BirthDate"
+                      lineageId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].Columns[BirthDate]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_Multiple_Transformations\Sort.Inputs[Sort Input].Columns[MaritalStatus]"
+                      cachedDataType="wstr"
+                      cachedLength="1"
+                      cachedName="MaritalStatus"
+                      lineageId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].Columns[MaritalStatus]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_Multiple_Transformations\Sort.Inputs[Sort Input].Columns[Gender]"
+                      cachedDataType="wstr"
+                      cachedLength="1"
+                      cachedName="Gender"
+                      lineageId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].Columns[Gender]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_Multiple_Transformations\Sort.Inputs[Sort Input].Columns[HireDate]"
+                      cachedDataType="dbDate"
+                      cachedName="HireDate"
+                      lineageId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].Columns[HireDate]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_Multiple_Transformations\Sort.Inputs[Sort Input].Columns[SalariedFlag]"
+                      cachedDataType="bool"
+                      cachedName="SalariedFlag"
+                      lineageId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].Columns[SalariedFlag]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_Multiple_Transformations\Sort.Inputs[Sort Input].Columns[VacationHours]"
+                      cachedDataType="i2"
+                      cachedName="VacationHours"
+                      lineageId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].Columns[VacationHours]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_Multiple_Transformations\Sort.Inputs[Sort Input].Columns[SickLeaveHours]"
+                      cachedDataType="i2"
+                      cachedName="SickLeaveHours"
+                      lineageId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].Columns[SickLeaveHours]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_Multiple_Transformations\Sort.Inputs[Sort Input].Columns[CurrentFlag]"
+                      cachedDataType="bool"
+                      cachedName="CurrentFlag"
+                      lineageId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].Columns[CurrentFlag]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_Multiple_Transformations\Sort.Inputs[Sort Input].Columns[rowguid]"
+                      cachedDataType="guid"
+                      cachedName="rowguid"
+                      lineageId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].Columns[rowguid]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_Multiple_Transformations\Sort.Inputs[Sort Input].Columns[ModifiedDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="ModifiedDate"
+                      lineageId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].Columns[ModifiedDate]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_Multiple_Transformations\Sort.Inputs[Sort Input].Columns[Levels]"
+                      cachedDataType="wstr"
+                      cachedLength="12"
+                      cachedName="Levels"
+                      lineageId="Package\DFT_Multiple_Transformations\Create_a_new_columns.Outputs[Derived Column Output].Columns[Levels]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_Multiple_Transformations\Sort.Inputs[Sort Input].Columns[Title]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Title"
+                      lineageId="Package\DFT_Multiple_Transformations\Create_a_new_columns.Outputs[Derived Column Output].Columns[Title]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_Multiple_Transformations\Sort.Inputs[Sort Input].Columns[LoadDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="LoadDate"
+                      lineageId="Package\DFT_Multiple_Transformations\Create_a_new_columns.Outputs[Derived Column Output].Columns[LoadDate]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_Multiple_Transformations\Sort.Inputs[Sort Input].Columns[ID]"
+                      cachedDataType="i4"
+                      cachedName="ID"
+                      lineageId="Package\DFT_Multiple_Transformations\Copy Column.Outputs[Copy Column Output].Columns[ID]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_Multiple_Transformations\Sort.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Multiple_Transformations\Sort.Outputs[Sort Output].Columns[BusinessEntityID]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Multiple_Transformations\Sort.Outputs[Sort Output].Columns[BusinessEntityID]"
+                      name="BusinessEntityID">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].Columns[BusinessEntityID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Multiple_Transformations\Sort.Outputs[Sort Output].Columns[JobTitle]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\DFT_Multiple_Transformations\Sort.Outputs[Sort Output].Columns[JobTitle]"
+                      name="JobTitle">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].Columns[JobTitle]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Multiple_Transformations\Sort.Outputs[Sort Output].Columns[NationalIDNumber]"
+                      dataType="wstr"
+                      length="15"
+                      lineageId="Package\DFT_Multiple_Transformations\Sort.Outputs[Sort Output].Columns[NationalIDNumber]"
+                      name="NationalIDNumber">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].Columns[NationalIDNumber]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Multiple_Transformations\Sort.Outputs[Sort Output].Columns[LoginID]"
+                      dataType="wstr"
+                      length="256"
+                      lineageId="Package\DFT_Multiple_Transformations\Sort.Outputs[Sort Output].Columns[LoginID]"
+                      name="LoginID">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].Columns[LoginID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Multiple_Transformations\Sort.Outputs[Sort Output].Columns[OrganizationNode]"
+                      dataType="bytes"
+                      length="892"
+                      lineageId="Package\DFT_Multiple_Transformations\Sort.Outputs[Sort Output].Columns[OrganizationNode]"
+                      name="OrganizationNode">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].Columns[OrganizationNode]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Multiple_Transformations\Sort.Outputs[Sort Output].Columns[OrganizationLevel]"
+                      dataType="i2"
+                      lineageId="Package\DFT_Multiple_Transformations\Sort.Outputs[Sort Output].Columns[OrganizationLevel]"
+                      name="OrganizationLevel">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].Columns[OrganizationLevel]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Multiple_Transformations\Sort.Outputs[Sort Output].Columns[BirthDate]"
+                      dataType="dbDate"
+                      lineageId="Package\DFT_Multiple_Transformations\Sort.Outputs[Sort Output].Columns[BirthDate]"
+                      name="BirthDate">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].Columns[BirthDate]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Multiple_Transformations\Sort.Outputs[Sort Output].Columns[MaritalStatus]"
+                      dataType="wstr"
+                      length="1"
+                      lineageId="Package\DFT_Multiple_Transformations\Sort.Outputs[Sort Output].Columns[MaritalStatus]"
+                      name="MaritalStatus">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].Columns[MaritalStatus]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Multiple_Transformations\Sort.Outputs[Sort Output].Columns[Gender]"
+                      dataType="wstr"
+                      length="1"
+                      lineageId="Package\DFT_Multiple_Transformations\Sort.Outputs[Sort Output].Columns[Gender]"
+                      name="Gender">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].Columns[Gender]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Multiple_Transformations\Sort.Outputs[Sort Output].Columns[HireDate]"
+                      dataType="dbDate"
+                      lineageId="Package\DFT_Multiple_Transformations\Sort.Outputs[Sort Output].Columns[HireDate]"
+                      name="HireDate"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].Columns[HireDate]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Multiple_Transformations\Sort.Outputs[Sort Output].Columns[SalariedFlag]"
+                      dataType="bool"
+                      lineageId="Package\DFT_Multiple_Transformations\Sort.Outputs[Sort Output].Columns[SalariedFlag]"
+                      name="SalariedFlag">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].Columns[SalariedFlag]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Multiple_Transformations\Sort.Outputs[Sort Output].Columns[VacationHours]"
+                      dataType="i2"
+                      lineageId="Package\DFT_Multiple_Transformations\Sort.Outputs[Sort Output].Columns[VacationHours]"
+                      name="VacationHours">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].Columns[VacationHours]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Multiple_Transformations\Sort.Outputs[Sort Output].Columns[SickLeaveHours]"
+                      dataType="i2"
+                      lineageId="Package\DFT_Multiple_Transformations\Sort.Outputs[Sort Output].Columns[SickLeaveHours]"
+                      name="SickLeaveHours">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].Columns[SickLeaveHours]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Multiple_Transformations\Sort.Outputs[Sort Output].Columns[CurrentFlag]"
+                      dataType="bool"
+                      lineageId="Package\DFT_Multiple_Transformations\Sort.Outputs[Sort Output].Columns[CurrentFlag]"
+                      name="CurrentFlag">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].Columns[CurrentFlag]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Multiple_Transformations\Sort.Outputs[Sort Output].Columns[rowguid]"
+                      dataType="guid"
+                      lineageId="Package\DFT_Multiple_Transformations\Sort.Outputs[Sort Output].Columns[rowguid]"
+                      name="rowguid">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].Columns[rowguid]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Multiple_Transformations\Sort.Outputs[Sort Output].Columns[ModifiedDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\DFT_Multiple_Transformations\Sort.Outputs[Sort Output].Columns[ModifiedDate]"
+                      name="ModifiedDate">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output].Columns[ModifiedDate]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Multiple_Transformations\Sort.Outputs[Sort Output].Columns[Levels]"
+                      dataType="wstr"
+                      length="12"
+                      lineageId="Package\DFT_Multiple_Transformations\Sort.Outputs[Sort Output].Columns[Levels]"
+                      name="Levels">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT_Multiple_Transformations\Create_a_new_columns.Outputs[Derived Column Output].Columns[Levels]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Multiple_Transformations\Sort.Outputs[Sort Output].Columns[Title]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\DFT_Multiple_Transformations\Sort.Outputs[Sort Output].Columns[Title]"
+                      name="Title">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT_Multiple_Transformations\Create_a_new_columns.Outputs[Derived Column Output].Columns[Title]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Multiple_Transformations\Sort.Outputs[Sort Output].Columns[LoadDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\DFT_Multiple_Transformations\Sort.Outputs[Sort Output].Columns[LoadDate]"
+                      name="LoadDate">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT_Multiple_Transformations\Create_a_new_columns.Outputs[Derived Column Output].Columns[LoadDate]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Multiple_Transformations\Sort.Outputs[Sort Output].Columns[ID]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Multiple_Transformations\Sort.Outputs[Sort Output].Columns[ID]"
+                      name="ID">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT_Multiple_Transformations\Copy Column.Outputs[Copy Column Output].Columns[ID]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\DFT_Multiple_Transformations.Paths[Copy Column Output]"
+              endId="Package\DFT_Multiple_Transformations\Sort.Inputs[Sort Input]"
+              name="Copy Column Output"
+              startId="Package\DFT_Multiple_Transformations\Copy Column.Outputs[Copy Column Output]" />
+            <path
+              refId="Package\DFT_Multiple_Transformations.Paths[Derived Column Output]"
+              endId="Package\DFT_Multiple_Transformations\Script Component.Inputs[Input 0]"
+              name="Derived Column Output"
+              startId="Package\DFT_Multiple_Transformations\Create_a_new_columns.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DFT_Multiple_Transformations.Paths[OLE DB Source Output]"
+              endId="Package\DFT_Multiple_Transformations\Create_a_new_columns.Inputs[Derived Column Input]"
+              name="OLE DB Source Output"
+              startId="Package\DFT_Multiple_Transformations\Employees_data.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\DFT_Multiple_Transformations.Paths[Output 0]"
+              endId="Package\DFT_Multiple_Transformations\Copy Column.Inputs[Copy Column Input]"
+              name="Output 0"
+              startId="Package\DFT_Multiple_Transformations\Script Component.Outputs[Output 0]" />
+            <path
+              refId="Package\DFT_Multiple_Transformations.Paths[Sort Output]"
+              endId="Package\DFT_Multiple_Transformations\Flat File Destination.Inputs[Flat File Destination Input]"
+              name="Sort Output"
+              startId="Package\DFT_Multiple_Transformations\Sort.Outputs[Sort Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="221.6,41.6"
+          Id="Package\DFT_Multiple_Transformations"
+          TopLeft="257.49998976787,46.800000371933" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\DFT_Multiple_Transformations">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="156,41.6"
+          Id="Package\DFT_Multiple_Transformations\Employees_data"
+          TopLeft="22.7,5.49999999999995" />
+        <NodeLayout
+          Size="190.4,41.6"
+          Id="Package\DFT_Multiple_Transformations\Create_a_new_columns"
+          TopLeft="5.50000000000001,107.1" />
+        <EdgeLayout
+          Id="Package\DFT_Multiple_Transformations.Paths[OLE DB Source Output]"
+          TopLeft="100.7,47.1">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59.9999999999999"
+              Start="0,0"
+              End="0,52.4999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.4999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="161.6,41.6"
+          Id="Package\DFT_Multiple_Transformations\Script Component"
+          TopLeft="19.9,208.7" />
+        <EdgeLayout
+          Id="Package\DFT_Multiple_Transformations.Paths[Derived Column Output]"
+          TopLeft="100.7,148.7">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59.9999999999999"
+              Start="0,0"
+              End="0,52.4999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.4999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="141.6,41.6"
+          Id="Package\DFT_Multiple_Transformations\Copy Column"
+          TopLeft="29.9,310.3" />
+        <EdgeLayout
+          Id="Package\DFT_Multiple_Transformations.Paths[Output 0]"
+          TopLeft="100.7,250.3">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59.9999999999999"
+              Start="0,0"
+              End="0,52.4999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.4999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="97.6,41.6"
+          Id="Package\DFT_Multiple_Transformations\Sort"
+          TopLeft="51.9000000000001,411.9" />
+        <EdgeLayout
+          Id="Package\DFT_Multiple_Transformations.Paths[Copy Column Output]"
+          TopLeft="100.7,351.9">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59.9999999999999"
+              Start="0,0"
+              End="0,52.4999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.4999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\DFT_Multiple_Transformations\Flat File Destination"
+          TopLeft="15.5000000000001,513.5" />
+        <EdgeLayout
+          Id="Package\DFT_Multiple_Transformations.Paths[Sort Output]"
+          TopLeft="100.7,453.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59.9999999999999"
+              Start="0,0"
+              End="0,52.4999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.4999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_Multiple_Transformations\Employees_data">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
