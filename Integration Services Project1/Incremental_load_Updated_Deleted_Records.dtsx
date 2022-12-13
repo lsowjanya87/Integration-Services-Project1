@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="23"
-  DTS:VersionGUID="{88675B99-1C36-4A09-9656-E5F010530477}">
+  DTS:VersionBuild="28"
+  DTS:VersionGUID="{A6CF25C3-6718-4A00-B02D-4161DB572CD5}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -90,6 +90,90 @@
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
           DTS:ConnectionString="Data Source=LAKSHMI\MSSQLSERVER01;Initial Catalog=tempdb;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{D3F50845-8893-4E99-A1C9-E8EFEBAE0A29}LAKSHMI\MSSQLSERVER01.tempdb;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LAKSHMI\MSSQLSERVER01.tempdb 1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{DAF97125-0499-4068-A199-7F9A9776B05A}"
+      DTS:ObjectName="LAKSHMI\MSSQLSERVER01.tempdb 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=LAKSHMI\MSSQLSERVER01;Initial Catalog=tempdb;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{DAF97125-0499-4068-A199-7F9A9776B05A}LAKSHMI\MSSQLSERVER01.tempdb 1;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LAKSHMI\MSSQLSERVER01.tempdb 2]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{7835B6F6-DA1F-4E59-833A-4714867300D9}"
+      DTS:ObjectName="LAKSHMI\MSSQLSERVER01.tempdb 2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=LAKSHMI\MSSQLSERVER01;Initial Catalog=tempdb;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{7835B6F6-DA1F-4E59-833A-4714867300D9}LAKSHMI\MSSQLSERVER01.tempdb 2;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LAKSHMI\MSSQLSERVER01.testdb]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{3F619843-9315-450B-9915-544B2FC815E3}"
+      DTS:ObjectName="LAKSHMI\MSSQLSERVER01.testdb">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=LAKSHMI\MSSQLSERVER01;Initial Catalog=testdb;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{3F619843-9315-450B-9915-544B2FC815E3}LAKSHMI\MSSQLSERVER01.testdb;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LAKSHMI\MSSQLSERVER01.testdb 1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{F51924E9-F143-4BB7-A606-9D2BDC30ED5B}"
+      DTS:ObjectName="LAKSHMI\MSSQLSERVER01.testdb 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=LAKSHMI\MSSQLSERVER01;Initial Catalog=testdb;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{F51924E9-F143-4BB7-A606-9D2BDC30ED5B}LAKSHMI\MSSQLSERVER01.testdb 1;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LAKSHMI\MSSQLSERVER01.testdb 2]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{051CC948-1CE8-4CC2-B073-855DB1CD6E56}"
+      DTS:ObjectName="LAKSHMI\MSSQLSERVER01.testdb 2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=LAKSHMI\MSSQLSERVER01;Initial Catalog=testdb;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{051CC948-1CE8-4CC2-B073-855DB1CD6E56}LAKSHMI\MSSQLSERVER01.testdb 2;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LAKSHMI\MSSQLSERVER01.testdb 3]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{63B11F4C-8609-496B-B652-A9C25C61C77E}"
+      DTS:ObjectName="LAKSHMI\MSSQLSERVER01.testdb 3">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=LAKSHMI\MSSQLSERVER01;Initial Catalog=testdb;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{63B11F4C-8609-496B-B652-A9C25C61C77E}LAKSHMI\MSSQLSERVER01.testdb 3;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LAKSHMI\MSSQLSERVER01.testdb 4]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{9DCE960B-5509-4EBF-A52E-3082856B9FEC}"
+      DTS:ObjectName="LAKSHMI\MSSQLSERVER01.testdb 4">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=LAKSHMI\MSSQLSERVER01;Initial Catalog=testdb;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{9DCE960B-5509-4EBF-A52E-3082856B9FEC}LAKSHMI\MSSQLSERVER01.testdb 4;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -306,8 +390,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task\Emails.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LAKSHMI\MSSQLSERVER01.tempdb]"
-                  connectionManagerRefId="Package.ConnectionManagers[LAKSHMI\MSSQLSERVER01.tempdb]"
+                  connectionManagerID="Package.ConnectionManagers[LAKSHMI\MSSQLSERVER01.testdb 2]"
+                  connectionManagerRefId="Package.ConnectionManagers[LAKSHMI\MSSQLSERVER01.testdb 2]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -689,8 +773,8 @@ where [refTable].[Id] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task\Lookup.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LAKSHMI\MSSQLSERVER01.tempdb]"
-                  connectionManagerRefId="Package.ConnectionManagers[LAKSHMI\MSSQLSERVER01.tempdb]"
+                  connectionManagerID="Package.ConnectionManagers[LAKSHMI\MSSQLSERVER01.testdb]"
+                  connectionManagerRefId="Package.ConnectionManagers[LAKSHMI\MSSQLSERVER01.testdb]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -877,7 +961,7 @@ where [refTable].[Id] = ?</property>
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[ZZ_Emails_Deleted]</property>
+                  name="OpenRowset">[ZZ_Deleted_Records]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -920,8 +1004,8 @@ where [refTable].[Id] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task\ZZ_Deleted_Records.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LAKSHMI\MSSQLSERVER01.tempdb]"
-                  connectionManagerRefId="Package.ConnectionManagers[LAKSHMI\MSSQLSERVER01.tempdb]"
+                  connectionManagerID="Package.ConnectionManagers[LAKSHMI\MSSQLSERVER01.testdb 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[LAKSHMI\MSSQLSERVER01.testdb 1]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -939,6 +1023,38 @@ where [refTable].[Id] = ?</property>
                       cachedName="id"
                       externalMetadataColumnId="Package\Data Flow Task\ZZ_Deleted_Records.Inputs[OLE DB Destination Input].ExternalColumns[id]"
                       lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[id]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\ZZ_Deleted_Records.Inputs[OLE DB Destination Input].Columns[first_name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="first_name"
+                      externalMetadataColumnId="Package\Data Flow Task\ZZ_Deleted_Records.Inputs[OLE DB Destination Input].ExternalColumns[first_name]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[first_name]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\ZZ_Deleted_Records.Inputs[OLE DB Destination Input].Columns[last_name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="last_name"
+                      externalMetadataColumnId="Package\Data Flow Task\ZZ_Deleted_Records.Inputs[OLE DB Destination Input].ExternalColumns[last_name]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[last_name]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\ZZ_Deleted_Records.Inputs[OLE DB Destination Input].Columns[email]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="email"
+                      externalMetadataColumnId="Package\Data Flow Task\ZZ_Deleted_Records.Inputs[OLE DB Destination Input].ExternalColumns[email]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[email]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\ZZ_Deleted_Records.Inputs[OLE DB Destination Input].Columns[gender]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="gender"
+                      externalMetadataColumnId="Package\Data Flow Task\ZZ_Deleted_Records.Inputs[OLE DB Destination Input].ExternalColumns[gender]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[gender]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -946,6 +1062,30 @@ where [refTable].[Id] = ?</property>
                       refId="Package\Data Flow Task\ZZ_Deleted_Records.Inputs[OLE DB Destination Input].ExternalColumns[id]"
                       dataType="i4"
                       name="id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\ZZ_Deleted_Records.Inputs[OLE DB Destination Input].ExternalColumns[first_name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="first_name" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\ZZ_Deleted_Records.Inputs[OLE DB Destination Input].ExternalColumns[last_name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="last_name" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\ZZ_Deleted_Records.Inputs[OLE DB Destination Input].ExternalColumns[email]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="email" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\ZZ_Deleted_Records.Inputs[OLE DB Destination Input].ExternalColumns[gender]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="gender" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -990,7 +1130,7 @@ where [refTable].[Id] = ?</property>
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[ZZ_Email_updated]</property>
+                  name="OpenRowset">[dbo].[ZZ_Email_Updated]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -1033,8 +1173,8 @@ where [refTable].[Id] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task\ZZ_Updated_Records.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LAKSHMI\MSSQLSERVER01.tempdb]"
-                  connectionManagerRefId="Package.ConnectionManagers[LAKSHMI\MSSQLSERVER01.tempdb]"
+                  connectionManagerID="Package.ConnectionManagers[LAKSHMI\MSSQLSERVER01.testdb 3]"
+                  connectionManagerRefId="Package.ConnectionManagers[LAKSHMI\MSSQLSERVER01.testdb 3]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1196,7 +1336,7 @@ where [refTable].[Id] = ?</property>
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{D3F50845-8893-4E99-A1C9-E8EFEBAE0A29}"
+          SQLTask:Connection="{9DCE960B-5509-4EBF-A52E-3082856B9FEC}"
           SQLTask:SqlStatementSource="declare @updated int, @deleted int&#xA;UPDATE a&#xA;   SET a.[First_name] = b.First_name&#xA;      ,a.[Last_name] = b.Last_name&#xA;      ,a.[Email] = b.Email&#xA;      ,a.[Gender] = b.Gender&#xA; from [dbo].[Emails] a inner join [dbo].[ZZ_Email_updated] as b&#xA; on a.Id = b.Id&#xA;set @updated = @@ROWCOUNT&#xA;delete a from Emails a where a.Id not in (select Id from [dbo].[ZZ_Emails_Deleted])&#xA;set @deleted = @@ROWCOUNT&#xA;&#xA;insert into [dbo].[audit_log]&#xA;select  'Package.dtsx', 'Emails', ?, @updated,getdate(),@deleted&#xA;&#xA;&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
           <SQLTask:ParameterBinding
             SQLTask:ParameterName="0"
@@ -1516,7 +1656,7 @@ where [refTable].[Id] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="44.0752799479167,29.5034965034965,96.3827734375,11.609375"
+              BoundingBox="44.0752799479165,29.5034965034965,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -1577,7 +1717,7 @@ where [refTable].[Id] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -1587,7 +1727,7 @@ where [refTable].[Id] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>

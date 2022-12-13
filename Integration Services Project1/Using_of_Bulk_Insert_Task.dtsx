@@ -1,0 +1,96 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="12/7/2022 10:12:32 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LAKSHMI"
+  DTS:CreatorName="LAKSHMI\laksh"
+  DTS:DTSID="{5F06B99D-51CF-4A17-A360-4CC3EEEDD5E0}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.948.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="5"
+  DTS:VersionGUID="{2E1ABD80-FB18-48C4-9037-1435C97773C7}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LAKSHMI\MSSQLSERVER01.tempdb]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{EEAA8689-9E2A-40C6-A34B-FBFEC2533BC9}"
+      DTS:ObjectName="LAKSHMI\MSSQLSERVER01.tempdb">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=LAKSHMI\MSSQLSERVER01;Initial Catalog=tempdb;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{EEAA8689-9E2A-40C6-A34B-FBFEC2533BC9}LAKSHMI\MSSQLSERVER01.tempdb;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LAKSHMI\MSSQLSERVER01.testdb]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{73EE337B-35E3-4DAC-BDA2-910E4A31DC87}"
+      DTS:ObjectName="LAKSHMI\MSSQLSERVER01.testdb">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=LAKSHMI\MSSQLSERVER01;Initial Catalog=testdb;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{73EE337B-35E3-4DAC-BDA2-910E4A31DC87}LAKSHMI\MSSQLSERVER01.testdb;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Person_Movie.csv]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{E46AADB7-6D26-4E6F-ABB8-203D85858CCC}"
+      DTS:ObjectName="Person_Movie.csv">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="C:\Users\laksh\Downloads\Person_Movie.csv" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Bulk Insert Task"
+      DTS:CreationName="Microsoft.BulkInsertTask"
+      DTS:Description="Bulk Insert Task"
+      DTS:DTSID="{738FB00B-4973-4437-A892-862CA2B0B6D9}"
+      DTS:ExecutableType="Microsoft.BulkInsertTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Bulk Insert Task"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <BulkInsertTask:BulkInsertTaskData
+          BulkInsertTask:SourceConnectionName="{E46AADB7-6D26-4E6F-ABB8-203D85858CCC}"
+          BulkInsertTask:DestinationConnectionName="{EEAA8689-9E2A-40C6-A34B-FBFEC2533BC9}"
+          BulkInsertTask:DestinationTableName="[dbo].[person]"
+          BulkInsertTask:FirstRow="2"
+          BulkInsertTask:FieldTerminator="Comma {,}" xmlns:BulkInsertTask="www.microsoft.com/sqlserver/dts/tasks/bulkinserttask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="152.8,41.6"
+          Id="Package\Bulk Insert Task"
+          TopLeft="210.83332495557,28.6000002272924" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
